@@ -32,6 +32,8 @@ const reducer = (state: AuthContextType, action: any) => {
   switch (action.type) {
     case "GET-CREDENTIALS":
       const user = localStorage.getItem("USER") || "";
+      console.log(typeof user);
+
       return {
         ...state,
         token: localStorage.getItem("TOKEN"),

@@ -4,6 +4,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { formatMoney } from "@/utils/helpers";
 
 import Image from "next/image";
+import AuthenticatedRoute from "../../utils/AuthenticatedRoute";
 
 import { HomeCard, Wallet, Credit } from "@/components";
 import { FuelPurchases } from "@/components/FuelPurchases";
@@ -79,4 +80,4 @@ const Dashboard = () => {
     </DashboardLayout>
   );
 };
-export default Dashboard;
+export default AuthenticatedRoute(Dashboard);

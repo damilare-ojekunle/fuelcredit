@@ -31,7 +31,7 @@ const Login = () => {
         return;
       }
 
-      // setToken(data?.data?.token);
+      setToken(data?.access_token);
       // setAuthUser(data?.data?.profile);
       toast.success("User logged in successfully");
       Router.push("/admin/dashboard");
