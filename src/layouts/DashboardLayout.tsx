@@ -1,6 +1,7 @@
 import React from "react";
 
-import { DashboardHeader, Sidebar } from "@/components";
+import { DashboardHeader } from "@/components";
+import Sidebar from "@/components/Sidebar";
 
 const DashboardLayout = ({
   title,

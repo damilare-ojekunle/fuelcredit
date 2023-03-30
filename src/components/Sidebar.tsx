@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 import { routes } from "@/utils/routes";
 import { useToggle } from "@/hooks";
 import { useAuth } from "@/contexts/AuthContext";
 
-const activeLink = (href) => useRouter().pathname.startsWith(href);
-export const Sidebar = () => {
+const Sidebar = () => {
+  const pathname = useRouter().pathname;
+  const activeLink = (href) => pathname.startsWith(href);
+
   return (
     <div className="w-[16rem] h-screen border ">
       <div>
@@ -70,3 +72,4 @@ export const Sidebar = () => {
     </div>
   );
 };
+export default Sidebar;
